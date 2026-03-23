@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1773778015800,
+    "nome": "Volkswagen voyage",
+    "placa": "123456",
+    "tipo": "Carro",
+    "foto": "img/voyage-branco.png",
+    "status": "disponivel"
+  },
+  {
+    "id": 1773842420424,
+    "nome": "PCX",
+    "placa": "123-1234",
+    "tipo": "Moto",
+    "foto": "img/pcx-preta.png",
+    "status": "disponivel"
+  }
+]

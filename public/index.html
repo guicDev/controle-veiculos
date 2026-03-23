@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Veículos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="header-content">
+      <div class="header-left">
+        <img src="img/logo.png" alt="Logo da empresa" class="logo">
+
+        <div class="header-texto">
+          <h1>Controle de Veículos</h1>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="menu">
+        <a href="index.html">Painel</a>
+        <a href="veiculos.html">Veículos</a>
+        <a href="motoristas.html">Motoristas</a>
+        <a href="historico.html">Histórico</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h2>Painel de Veículos</h2>
+      <p>Acompanhe a situação atual dos veículos cadastrados.</p>
+    </div>
+
+    <div class="top-actions">
+      <button class="btn-backup" onclick="fazerBackup()">Gerar Backup</button>
+    </div>
+
+    <section>
+      <div id="cards" class="cards"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitulo">Movimentação</h3>
+        <button class="btn-fechar" onclick="fecharModal()">×</button>
+      </div>
+
+      <div class="modal-body">
+        <input type="hidden" id="movimentacaoId">
+        <input type="hidden" id="veiculoIdSelecionado">
+
+        <div class="campo">
+          <label>Veículo</label>
+          <input type="text" id="veiculoNome" disabled>
+        </div>
+
+        <div class="campo" id="blocoMotorista">
+          <label>Motorista</label>
+          <select id="motoristaSelect"></select>
+        </div>
+
+        <div class="campo">
+          <label>Observação</label>
+          <textarea id="observacao" rows="3" placeholder="Digite uma observação"></textarea>
+        </div>
+
+        <div class="campo">
+          <label>Assinatura</label>
+          <canvas id="assinaturaCanvas" width="500" height="180"></canvas>
+          <div class="assinatura-acoes">
+            <button type="button" class="btn-secundario" onclick="limparAssinatura()">Limpar assinatura</button>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button id="btnConfirmarModal" onclick="confirmarAcao()">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assinatura.js"></script>
+  <script src="script.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>

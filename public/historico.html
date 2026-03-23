@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histórico - Controle de Veículos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="header-content">
+      <div class="header-left">
+        <img src="img/logo.png" alt="Logo Dara" class="logo">
+
+        <div class="header-texto">
+          <h1>Controle de Veículos</h1>
+          <p>Dara Produções e Eventos</p>
+        </div>
+      </div>
+
+      <div class="menu">
+        <a href="index.html">Painel</a>
+        <a href="veiculos.html">Veículos</a>
+        <a href="motoristas.html">Motoristas</a>
+        <a href="historico.html">Histórico</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h2>Histórico de Movimentações</h2>
+      <p>Consulte retiradas, devoluções, observações e comprovantes em PDF.</p>
+    </div>
+
+    <section class="form-box">
+      <h2>Filtros</h2>
+
+      <div class="filtros-grid filtros-grid-historico">
+        <div class="filtro-item filtro-texto">
+          <label for="filtroTexto">Busca</label>
+          <input type="text" id="filtroTexto" placeholder="Buscar por veículo, placa ou motorista">
+        </div>
+
+        <div class="filtro-item">
+          <label for="filtroStatus">Status</label>
+          <select id="filtroStatus">
+            <option value="">Todos os status</option>
+            <option value="em uso">Em uso</option>
+            <option value="finalizado">Finalizado</option>
+          </select>
+        </div>
+
+        <div class="filtro-item">
+          <label for="filtroDataInicial">Data inicial</label>
+          <input type="date" id="filtroDataInicial">
+        </div>
+
+        <div class="filtro-item">
+          <label for="filtroDataFinal">Data final</label>
+          <input type="date" id="filtroDataFinal">
+        </div>
+
+        <div class="filtro-item filtro-botao">
+          <label>&nbsp;</label>
+          <button type="button" onclick="carregarHistorico()">Filtrar</button>
+        </div>
+
+        <div class="filtro-item filtro-botao">
+          <label>&nbsp;</label>
+          <button type="button" class="btn-secundario" onclick="limparFiltros()">Limpar filtros</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="list-box">
+      <h2>Registros</h2>
+      <div id="listaHistorico"></div>
+    </section>
+  </main>
+
+  <script src="historico.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>
