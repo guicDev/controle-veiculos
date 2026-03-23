@@ -547,11 +547,7 @@ function desenharCabecalho(doc, movId) {
   doc
     .fillColor("#0f172a")
     .font("Helvetica-Bold")
-    .fontSize(11)
-    .text("DARA PRODUÇÕES E EVENTOS", 40, 95, {
-      align: "center",
-      width: 515
-    });
+    .fontSize(11);
 
   doc.fillColor("#000000");
 }
